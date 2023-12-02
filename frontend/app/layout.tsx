@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Manrope } from 'next/font/google'
 import './globals.css'
+import { NextUIProvider } from '@nextui-org/react'
+import { Providers } from '@/app/providers'
 
-const inter = Inter({
+const inter = Manrope({
   subsets: ['latin'],
 })
 export const metadata: Metadata = {
@@ -16,8 +18,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html className="h-full" lang="en">
+      <body className={inter.className + ' h-full'}>
+        <Providers>{children} </Providers>
+      </body>
     </html>
   )
 }
