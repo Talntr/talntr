@@ -1,6 +1,6 @@
 'use client'
 import { Button } from '@nextui-org/button'
-import { RefObject, useEffect, useRef } from 'react'
+import { RefObject } from 'react'
 import useScreenRef from '@/hooks/useScreenRef'
 import { Divider } from '@nextui-org/divider'
 import { Image } from '@nextui-org/image'
@@ -72,8 +72,8 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <div className="w-full h-full grid md:grid-cols-2">
-        <div className="grid grid-col-2 col-span-2 justify-center mt-16 md:mt-32">
+      <div className="w-full h-1/2 grid md:grid-cols-2">
+        <div className="grid grid-col-2 justify-center place-items-center mr-16">
           <div>
             <div
               ref={bannerText}
@@ -104,25 +104,20 @@ export default function Home() {
         </div>
         <div
           ref={bannerImage}
-          className="grid grid-col-2 md:col-span-1 sm:col-span-2 justify-center mt-16 delay-1000 duration-1000 ease-in-out opacity-0"
+          className="grid grid-col-2 justify-center place-items-center delay-1000 duration-1000 ease-in-out opacity-0"
         >
           <Image src="banner_image.png" alt="banner image" />
         </div>
       </div>
-      <div>
-        <Divider className="w-full bg-teal-500" />
-      </div>
-      <div className="w-full h-1/4 grid grid-cols-1 mt-16 md:mt-32">
+
+      <div className="w-full h-1/4 grid grid-cols-1 mt-16 md:mt-36">
         <div className="grid col-span-1 h-1/2 flex-grow place-items-center">
           <Carousel />
         </div>
       </div>
-      <div>
-        <Divider className="w-full bg-teal-500" />
-      </div>
       <div
         ref={placeHolder2}
-        className="w-full h-full grid grid-cols-2 duration-1000 ease-in-out opacity-0 mt-16 md:mt-32"
+        className="w-full h-full grid grid-cols-2 duration-1000 ease-in-out opacity-0 mt-16 md:mt-36"
       >
         <div className="flex h-full flex-grow justify-center place-items-start">
           <div>

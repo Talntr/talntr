@@ -73,7 +73,7 @@ export default function Home() {
         </div>
       </header>
       <div className="w-full h-full grid md:grid-cols-2">
-        <div className="grid grid-col-2 col-span-2 justify-center mt-16 md:mt-32">
+        <div className="grid grid-col-2 justify-center place-items-center mr-16">
           <div>
             <div
               ref={bannerText}
@@ -104,7 +104,7 @@ export default function Home() {
         </div>
         <div
           ref={bannerImage}
-          className="grid grid-col-2 md:col-span-1 sm:col-span-2 justify-center mt-16 delay-1000 duration-1000 ease-in-out opacity-0"
+          className="grid grid-col-2 justify-center place-items-center delay-1000 duration-1000 ease-in-out opacity-0"
         >
           <Image src="banner_image.png" alt="banner image" />
         </div>

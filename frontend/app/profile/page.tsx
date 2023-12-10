@@ -15,8 +15,8 @@ export default function Profile() {
                 className="w-25 h-25 text-large mb-14"
               />
               <div className="flex flex-col mx-auto gap-y-4 ml-4">
-                <Input label="First name"></Input>
-                <Input label="Name"></Input>
+                <Input type="text" label="First name" />
+                <Input type="text" label="Name" />
               </div>
             </div>
           </div>
