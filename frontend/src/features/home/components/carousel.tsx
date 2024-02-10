@@ -1,3 +1,4 @@
+'use client'
 import { useEffect } from 'react'
 
 export default function Carousel() {
@@ -112,7 +113,7 @@ export default function Carousel() {
           --_animation-direction: forwards;
         }
 
-        .scroller[data-speed='fast'] {
+        .scroller[data-speed='slow'] {
           --_animation-duration: 20s;
         }
 

@@ -9,8 +9,11 @@ const config: Config = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontSize: {
+      '2xl': '2rem',
+      '3xl': '3rem',
+    },
     extend: {
-      extend: {},
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -25,8 +28,8 @@ const config: Config = {
         light: {
           // ...
           colors: {
-            primary: '#88BDBC',
-            secondary: '#254E58',
+            primary: '#1967d2',
+            secondary: '#f9ab00',
             content1: '#FFFFFF',
             content2: '#FFFFFF',
             content3: '#FFFFFF',
