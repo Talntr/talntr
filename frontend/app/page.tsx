@@ -1,69 +1,95 @@
+'use client'
+
 import { Button } from '@nextui-org/button'
 import { Image } from '@nextui-org/image'
-import Carousel from '@/src/features/home/components/carousel'
 import { Navbar, NavbarBrand, NavbarContent } from '@nextui-org/navbar'
 import { Link, NavbarItem } from '@nextui-org/react'
-import Banner from '@/src/features/home/components/banner'
-import JoinWaitingList from '@/src/features/home/components/join-waiting-list'
-import BannerImage from '@/src/features/home/components/banner-image'
+import Banner from '@/components/banner/banner'
+import JoinWaitingList from '@/components/join-waiting-list'
+import BannerImage from '@/components/banner/banner-image'
+import JobCard from '@/components/job-card/job-card'
 
 export default async function Home() {
   return (
-    <div
-      className="bg-no-repeat bg-cover bg-center w-full h-full absolute"
-      style={{ backgroundImage: 'url(background_blue.png)' }}
-    >
+    <div className="bg-no-repeat bg-cover bg-center w-full h-full absolute">
       <div className="w-full h-full container sm:mx-auto pr-16 pl-16">
         <Navbar
           style={{ maxWidth: '100% !important' }}
-          className="backdrop-saturate-0 bg-transparent backdrop-filter-none justify-start"
+          className="justify-start mt-4"
         >
           <NavbarBrand>
-            <p className="font-bold text-2xl">TALNTR.</p>
+            <h1 className="font-bold text-3xl text-primary">Talntr</h1>
           </NavbarBrand>
-          <NavbarContent className="hidden sm:flex gap-4" justify="center">
+          <NavbarContent
+            className="hidden sm:flex gap-4 bg-[#f6f6f6] rounded-full p-8"
+            justify="center"
+          >
             <NavbarItem>
-              <Link color="foreground" href="#">
-                Features
-              </Link>
-            </NavbarItem>
-            <NavbarItem isActive>
-              <Link
-                underline="active"
-                color="foreground"
-                href="#"
-                aria-current="page"
-              >
-                Customers
+              <Link color="primary" href="#">
+                Talnts
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link color="foreground" href="#">
-                Integrations
+              <Link color="primary" href="#">
+                Bedrijven
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link color="primary" href="#">
+                Prijzen
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link color="primary" href="#">
+                Inzichten
               </Link>
             </NavbarItem>
           </NavbarContent>
           <NavbarContent justify="end">
             <NavbarItem className="hidden lg:flex">
-              <Button variant="bordered" href="#">
+              <Button
+                size="lg"
+                variant="bordered"
+                className="bg-[#e2eaf8] text-primary"
+                href="#"
+              >
                 Login
               </Button>
             </NavbarItem>
-            <NavbarItem>
-              <Button as={Link} variant="bordered" href="#">
-                Sign Up
+            <NavbarItem className="hidden lg:flex">
+              <Button
+                size="lg"
+                variant="bordered"
+                className="text-white bg-primary"
+                href="#"
+              >
+                Registreer
               </Button>
             </NavbarItem>
           </NavbarContent>
         </Navbar>
-        <div className="w-full h-full grid md:grid-cols-2">
-          <div className="grid grid-col-2 justify-center place-items-center mr-16">
+        <div className="w-full h-full grid md:grid-cols-2 mt-32">
+          <div className="grid justify-center place-items-start mr-16">
             <div>
               <Banner></Banner>
-              <JoinWaitingList></JoinWaitingList>
+              {/*<JoinWaitingList></JoinWaitingList>*/}
             </div>
           </div>
-          <BannerImage />
+          <div className="relative">
+            <div className="absolute -top-20 -left-20">
+              <JobCard
+                logo={'/images/logo-1.png'}
+                title="Software Engineer"
+                location="Brussel, BE"
+                categories={['Web App', 'C#', 'Javascript', 'Vue.js']}
+                isPrivate={false}
+                isUrgent={false}
+              ></JobCard>
+            </div>
+            <div className="ml-16">
+              <BannerImage />
+            </div>
+          </div>
         </div>
         <div className="w-full flex justify-center font-extrabold">
           <span className="text-2xl text-[#202124]">
@@ -205,15 +231,6 @@ export default async function Home() {
             <div>
               <Image alt="placeholder" src="https://placehold.co/600x400" />
             </div>
-          </div>
-        </div>
-        <div className="w-full h-1/4 grid grid-cols-1">
-          <div className="flex justify-center text-2xl font-extrabold text-[#202124]">
-            Deze professionals gingen je al voor, lees hier hun Talntr
-            ervaringen
-          </div>
-          <div className="grid col-span-1 h-1/2 flex-grow place-items-center">
-            <Carousel />
           </div>
         </div>
         <footer className="w-full grid grid-cols-1">

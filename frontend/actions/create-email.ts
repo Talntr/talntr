@@ -1,7 +1,5 @@
-'use server'
-
 import { object, string } from 'zod'
-import { getXataClient } from '@/src/xata'
+import { getXataClient } from '@/libs/xata'
 import { XataError } from '@xata.io/client'
 
 export async function createEmail(email: string): Promise<{

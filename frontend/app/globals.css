@@ -29,5 +29,5 @@ header {
 }
 
 * {
-  @apply text-white;
+  @apply text-[#333];
 }

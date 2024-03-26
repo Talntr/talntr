@@ -3,16 +3,12 @@ import { nextui } from '@nextui-org/react'
 
 const config: Config = {
   content: [
-    './first/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    fontSize: {
-      '2xl': '2rem',
-      '3xl': '3rem',
-    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -28,14 +24,10 @@ const config: Config = {
         light: {
           // ...
           colors: {
-            primary: '#1967d2',
+            primary: '#265192',
             secondary: '#f9ab00',
-            content1: '#FFFFFF',
-            content2: '#FFFFFF',
-            content3: '#FFFFFF',
-            content4: '#FFFFFF',
-            focus: '#78E8C5',
-            foreground: '#FFFFFF',
+            success: '#e6f2e7',
+            warning: '#fcf3e2',
           },
         },
         dark: {

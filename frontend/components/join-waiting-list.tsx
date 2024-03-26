@@ -3,8 +3,8 @@
 import { Button } from '@nextui-org/button'
 import { Input } from '@nextui-org/input'
 import toast from 'react-hot-toast'
-import { createEmail } from '@/app/actions'
 import { FormEvent } from 'react'
+import { createEmail } from '@/actions/create-email'
 
 export default function JoinWaitingList() {
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
