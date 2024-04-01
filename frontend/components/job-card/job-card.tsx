@@ -12,6 +12,7 @@ export default function JobCard({
   categories,
   isPrivate,
   isUrgent,
+  companyName,
 }: {
   logo: string
   title: string
@@ -19,9 +20,10 @@ export default function JobCard({
   categories: string[]
   isPrivate: boolean
   isUrgent: boolean
+  companyName: string
 }) {
   return (
-    <Card>
+    <Card className="min-w-full">
       <CardHeader>
         <div className="absolute right-1 top-1">
           <Chip className="bg-[#e2eaf8] text-primary">Full-time</Chip>
@@ -40,14 +42,19 @@ export default function JobCard({
             </Chip>
           </div>
         )}
-        <div className="flex w-full justify-center">
-          <Image
-            src={logo}
-            alt="Company Image"
-            width="60"
-            style={{ height: '60px' }}
-            className="rounded-full"
-          />
+        <div className="w-full">
+          <div className="flex w-full justify-center">
+            <Image
+              src={logo}
+              alt="Company Image"
+              width="60"
+              style={{ height: '60px' }}
+              className="rounded-full"
+            />
+          </div>
+          <div className="flex w-full justify-center">
+            <span className="text-xs text-[#58a65c] mt-2">{companyName}</span>
+          </div>
         </div>
       </CardHeader>
       <CardBody className="p-4">
