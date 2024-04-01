@@ -8,3 +8,15 @@
 .idea/inspectionProfiles/Project_Default.xml
 .idea/codeStyles/Project.xml
 .idea/codeStyles/codeStyleConfig.xml
+/frontend/.deployment
+/frontend/.xata/migrations/.ledger
+/frontend/.vs/frontend/v17/.wsuo
+/frontend/.xatarc
+/frontend/.xata/version/compatibility.json
+/frontend/.vs/frontend/v17/DocumentLayout.json
+/frontend/.xata/migrations/mig_cn10ddd46000kt7p2nkg_eeb71e23.json
+/frontend/.xata/migrations/mig_cn10dnco92vdb04o24sg_e78fac0f.json
+/frontend/.vscode/settings.json
+/frontend/.vs/slnx.sqlite
+/frontend/libs/xata.ts
+/frontend/yarn.lock
