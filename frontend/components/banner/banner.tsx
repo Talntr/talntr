@@ -8,6 +8,7 @@ export default function Banner() {
   return (
     <div className={styles.banner_wrapper + ' mb-5'}>
       <h2 className="text-5xl text-primary font-bold mb-16">
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         Where tomorrow's opportunities become today's reality.
       </h2>
       <ul className={styles.container_list}>
